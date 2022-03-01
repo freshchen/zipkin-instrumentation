@@ -6,22 +6,19 @@
         <artifactId>zipkin-instrumentation</artifactId>
         <groupId>com.github.freshchen</groupId>
         <version>0.0.1-SNAPSHOT</version>
-        <relativePath>../pom.xml</relativePath>
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>jedis-instrumentation-263</artifactId>
+    <artifactId>jedis-instrumentation</artifactId>
 
     <dependencies>
         <dependency>
             <groupId>com.github.freshchen</groupId>
-            <artifactId>jedis-instrumentation</artifactId>
+            <artifactId>instrumentation-core</artifactId>
         </dependency>
         <dependency>
-            <groupId>redis.clients</groupId>
-            <artifactId>jedis</artifactId>
-            <version>2.6.3</version>
-            <optional>true</optional>
+            <groupId>com.github.freshchen</groupId>
+            <artifactId>jedis-instrumentation-263</artifactId>
         </dependency>
     </dependencies>
 

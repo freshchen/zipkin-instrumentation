@@ -6,7 +6,9 @@
     <artifactId>zipkin-instrumentation</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <modules>
+        <module>instrumentation-core</module>
         <module>jedis-instrumentation-263</module>
+        <module>jedis-instrumentation</module>
     </modules>
     <packaging>pom</packaging>
     <url>http://maven.apache.org</url>
@@ -21,7 +23,10 @@
         <maven.build.timestamp.format>yyyy-MM-dd HH:mm:ssZ</maven.build.timestamp.format>
         <maven.compiler.source>11</maven.compiler.source>
         <maven.compiler.target>11</maven.compiler.target>
-
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <project.build.resourceEncoding>UTF-8</project.build.resourceEncoding>
+        <project.build.outputEncoding>UTF-8</project.build.outputEncoding>
+        <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
         <!--  *****************************************  3rd  ***************************************** -->
         <guava.version>31.0.1-jre</guava.version>
         <commons-lang3.version>3.9</commons-lang3.version>
@@ -33,8 +38,23 @@
     <dependencyManagement>
         <dependencies>
             <dependency>
+                <groupId>com.github.freshchen</groupId>
+                <artifactId>instrumentation-core</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.github.freshchen</groupId>
+                <artifactId>jedis-instrumentation</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.github.freshchen</groupId>
+                <artifactId>jedis-instrumentation-263</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <dependency>
                 <groupId>io.zipkin.brave</groupId>
-                <artifactId>brave-bom</artifactId>
+                <artifactId>brave</artifactId>
                 <version>${brave.version}</version>
             </dependency>
             <dependency>
@@ -61,12 +81,6 @@
     </dependencyManagement>
 
     <build>
-        <directory>target</directory>
-        <sourceDirectory>src/main/java</sourceDirectory>
-        <testSourceDirectory>src/test/java</testSourceDirectory>
-        <outputDirectory>target/classes</outputDirectory>
-        <testOutputDirectory>target/test-classes</testOutputDirectory>
-
         <pluginManagement>
             <plugins>
                 <plugin>

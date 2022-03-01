@@ -3,12 +3,11 @@ package com.github.freshchen.jedis.instrumentation.util;
 import brave.Span;
 import brave.Tracer;
 import com.github.freshchen.instrumentation.core.util.TracerHelper;
-import com.github.freshchen.jedis263.instrumentation.JedisConstants;
 
 import java.util.Arrays;
 import java.util.Objects;
 
-import static com.github.freshchen.jedis263.instrumentation.JedisConstants.KEY;
+import static com.github.freshchen.jedis.instrumentation.util.JedisConstants.KEY;
 
 
 /**

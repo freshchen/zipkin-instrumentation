@@ -1,4 +1,4 @@
-package com.github.freshchen.jedis263.instrumentation;
+package com.github.freshchen.jedis.instrumentation.util;
 
 /**
  * @author freshchen

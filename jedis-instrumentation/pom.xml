@@ -16,10 +16,6 @@
             <groupId>com.github.freshchen</groupId>
             <artifactId>instrumentation-core</artifactId>
         </dependency>
-        <dependency>
-            <groupId>com.github.freshchen</groupId>
-            <artifactId>jedis-instrumentation-263</artifactId>
-        </dependency>
     </dependencies>
 
     <build>
